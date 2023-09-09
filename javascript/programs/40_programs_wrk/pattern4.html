@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pattern4</title>
+</head>
+<body>
+    <script>
+        var a = ' '
+        var n = 5
+        var m = (n-1)
+        for(i = 1; i <=n; i++){
+            a = a.trim()
+            a = ' '.repeat(m) + a +(i > 1 ? ' ' : ' ') + '*'
+            console.log(a)
+            m--
+        }
+    </script>
+</body>
+</html>

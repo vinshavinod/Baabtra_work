@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Divisible by 3 and 5</title>
+</head>
+<body>
+    <script>
+        // Initialize arrays to store numbers divisible by 3, 5, and both
+const divisibleBy3 = [];
+const divisibleBy5 = [];
+const divisibleByBoth = [];
+
+for (let i = 1; i <= 100; i++) {
+  if (i % 3 === 0 && i % 5 === 0) {
+    divisibleByBoth.push(i);
+  } else if (i % 3 === 0) {
+    divisibleBy3.push(i);
+  } else if (i % 5 === 0) {
+    divisibleBy5.push(i);
+  }
+}
+
+console.log("Divided by 3:");
+console.log(divisibleBy3.join(", "));
+
+console.log("Divided by 5:");
+console.log(divisibleBy5.join(", "));
+
+console.log("Divided by 3 & 5:");
+console.log(divisibleByBoth.join(", "));
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,97 @@
+.head3 {
+    color: chocolate;
+    text-align: center;
+}
+.para2 {
+    text-align: center;
+    font-size: 23px;
+}
+.image {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto;
+    grid-gap: 20px;
+    
+}
+img {
+    width: 500px;
+    height: 350px;
+}
+.btn {
+    color: white;
+    background-color: black;
+    width: 150px;
+    height: 40px;
+    font-size: 20px;
+    
+    
+}
+.footer {
+    margin-top: 150px;
+    width: 100%;
+    padding: 100px 15%;
+    background: #333;
+    color: white;
+    display: flex;
+}
+
+.col-1 {
+    width: 350px;
+    
+}
+.col-2 {
+    width: 250px;
+}
+.col-2 a {
+    text-decoration: none;
+    color: white;
+    display: block;
+}
+.col-3 {
+    width: 250px;
+}
+.col-3 a {
+    text-decoration: none;
+    color: white;
+    display: block;
+}
+.col-4 {
+    width: 350px;
+}
+.last {
+    text-align: center;
+}
+.h1 {
+    float: left;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav {
+    margin-top: 20px;
+    text-align: right;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 23px;
+    margin-right: 40px;
+    font-family: 'Times New Roman', Times, serif;
+
+}
+
+nav a:hover {
+    text-decoration: none;
+    color: orangered;
+}

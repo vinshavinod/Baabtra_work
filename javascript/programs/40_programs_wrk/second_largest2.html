@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>second largest element</title>
+</head>
+<body>
+    <script>
+    function secondLarge(array){
+        let first = -1 , second = -1
+        for(let i = 0; i <= array.length - 1; i++){
+            if(array[i] > first){
+                second = first
+                first = array[i]
+
+            }
+            else if(array[i] > second && array[i] != first){
+                second = array[i]
+            }
+        }
+     console.log(second)
+    }
+    let array = [10 , 20 , 77 , 1 , 9 , 80]
+    secondLarge(array)
+    </script>
+</body>
+</html>

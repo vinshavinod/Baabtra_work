@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Count occurrence</title>
+</head>
+<body>
+   <script>
+    function occurrence(){
+        let string = 'good morning , good night'
+        console.log((string.match(/good/g)).length)
+    }
+    occurrence()             //out put -- 2
+
+    // function occurrence(){
+    //     let string = 'good morning , good night'
+    //     console.log((string.match(/night/g)).length)
+    // }
+    // occurrence()    output-- 1
+   </script>
+</body>
+</html>

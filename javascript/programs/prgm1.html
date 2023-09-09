@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <!-- inline js -->
+    <button type="button" onclick="alert('Baabtra')">Click</button>
+    <!-- internal js -->
+    <script>
+            document.write("Helloo");
+            let age = 25;
+            console.log (age, typeof(age))
+            let name = 'vinsha';
+            console.log (name , typeof(name))
+
+            let student = {name:'vinsha',age:20, place:'calicut'}
+            console.log(student.name, student.age, student.place)
+
+            let marks = [50,60,70,80,90]
+            console.log(marks[3])
+            console.log('Total marks=',marks[0]+ marks[1]+marks[2]+marks[4])
+            console.log('My name is ' + student.name + 'My age is ' + student.age + 'My place is ' + student.place)
+            console.log(`My name is ${student.name} My age is ${student.age} My place is ${student.place}` )
+            console.log(x)
+            var x = 10
+            var y = '10'
+            console.log(x==y)
+            console.log(x!==y)
+
+            student_name = prompt('Enter your name')
+            document.write('<h1>Welcome' + student_name +'</h1>')
+            
+
+    </script>
+    <!-- external js -->
+    <script src="/js/prgm1.js"></script>
+</body>
+</html>

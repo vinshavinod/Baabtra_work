@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transpose of matrix</title>
+</head>
+<body>
+    <script>
+        function createMatrix(width, height) {
+    var result = new Array(height);
+    for (var i = 0; i < height; ++i) {
+        result[i] = new Array(width);
+    }
+    return result;
+} 
+
+function transposeMatrix(matrix) {
+    if (matrix.length == 0) {
+        return [];
+    }
+    var matrixRow = matrix[0];
+    if (matrixRow == null) {
+        throw new Error('Undefined matrix row 1.');
+    }
+    var matrixWidth = matrixRow.length;
+    var matrixHeight = matrix.length;
+    var result = createMatrix(matrixWidth, matrixHeight);
+    for (var i = 0; i < matrixHeight; ++i) {
+        var matrixRow = matrix[i];
+        if (matrixRow == null) {
+            throw new Error('Undefined matrix row ' + (i + 1) + '.');
+        }
+        if (matrixWidth != matrixRow.length) {
+            throw new Error('Matrix row ' + (i + 1) + ' has different width than row 1.');
+        }
+        for (var j = 0; j < matrixWidth; ++j) {
+            result[j][i] = matrixRow[j];
+        }
+    }
+    return result;
+}
+
+// Helper methods:
+
+function printMatrix(matrix) {
+    var text = '';
+    for (var i = 0; i < matrix.length; ++i) {
+        var row = matrix[i];
+        for (var j = 0; j < row.length; ++j) {
+            text += row[j] + ' ';
+        }
+        text += '\n';
+    }
+    console.log(text);
+}
+
+// Usage example:
+
+var matrix = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+];
+var transposedMatrix = transposeMatrix(matrix);
+
+printMatrix(transposedMatrix); // 1 4 7 
+                               // 2 5 8 
+                               // 3 6 9 
+    </script>
+</body>
+</html>

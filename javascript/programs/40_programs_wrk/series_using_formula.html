@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>series using formula</title>
+</head>
+<body>
+    <script>
+        function generateSeries(a, b, n) {
+  let result = [];
+  let term = a;
+  let powerOf2 = 1;
+
+  for (let i = 0; i < n; i++) {
+    term += powerOf2 * b;
+    powerOf2 *= 2;
+    result.push(term);
+  }
+
+  return result;
+}
+
+const a = 0;
+const b = 2;
+const n = 10;
+
+const series = generateSeries(a, b, n);
+console.log(series.join(" "));
+
+    </script>
+</body>
+</html>

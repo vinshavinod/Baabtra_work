@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+ 
+<body>
+    <button type="button" onclick="gradeswitch()">Check</button>
+    <script>
+        function gradeswitch() {
+            var mark = Number(prompt('enter your mark'))
+            var grade
+            switch (true) {
+                case mark >=90 && mark<=100:
+                    grade = 'A'
+                    break
+                case mark<=89 && mark>=80 :
+                    grade = 'B'
+                    break
+                case mark <=79 && mark>=70 :
+                    grade = 'C'
+                    break
+                case mark<=69 && mark>=60 :
+                    grade = 'D'
+                    break
+                case mark<=59 && mark>=50 :
+                    grade = 'Failed'
+                    break
+                default:
+                    grade = 'invalid'
+                    
+                
+
+
+            }
+            alert(grade)
+        }
+    </script>
+</body>
+
+</html>

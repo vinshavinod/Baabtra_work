@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Style for the accordion menu items */
+        .accordion-item {
+            border: 1px solid #ddd;
+            margin-bottom: 10px;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        /* Style for the expanded content (hidden by default) */
+        .accordion-content {
+            display: none;
+        }
+
+        /* Style for the expanded content when active */
+        .active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <!-- Accordion menu items -->
+    <div class="accordion-item" onclick="toggleAccordion(1)">Item 1</div>
+    <div class="accordion-content" id="content1">Content for Item 1</div>
+
+    <div class="accordion-item" onclick="toggleAccordion(2)">Item 2</div>
+    <div class="accordion-content" id="content2">Content for Item 2</div>
+
+    <div class="accordion-item" onclick="toggleAccordion(3)">Item 3</div>
+    <div class="accordion-content" id="content3">Content for Item 3</div>
+
+    <script>
+        // JavaScript to handle accordion behavior
+        function toggleAccordion(itemId) {
+            const contentId = `content${itemId}`;
+            const contentElement = document.getElementById(contentId);
+
+            // Close all accordion items except the clicked one
+            const accordionContents = document.querySelectorAll('.accordion-content');
+            accordionContents.forEach((content) => {
+                if (content.id !== contentId) {
+                    content.classList.remove('active');
+                }
+            });
+
+            // Toggle the active class to expand/collapse the clicked item
+            contentElement.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

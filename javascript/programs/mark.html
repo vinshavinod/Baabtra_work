@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Student marksheet</h1>
+    <button type="button" onclick="grade()">Check</button>
+    <script>
+        function grade(){
+            var mark = Number(prompt('Enter a number'))
+            if (mark<=100 && mark>=90){
+                alert(mark + ' grade O')
+            }
+            
+            else if (mark<=89 && mark>=80){
+                alert(mark + ' grade A')
+            }
+            else if (mark<=79 && mark>=70){
+                alert(mark + ' grade B+')
+            }
+            else if (mark<=69 && mark>=60){
+                alert(mark + ' grade B')
+            }
+            else if (mark<=59 && mark>=50){
+                alert(mark + ' grade C')
+            }
+            else if (mark<=49 && mark>=0){
+                alert(mark + ' Failed')
+            }
+            else {
+                alert('invalid input')
+            }
+        }
+    </script>
+</body>
+</html>

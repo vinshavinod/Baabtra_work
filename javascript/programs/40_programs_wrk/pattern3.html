@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    function printPattern(rows) {
+        for (let i = 1; i <= rows; i++) {
+            let pattern = '';
+    
+            // Add leading spaces to the pattern 'rows - i' times
+            for (let j = 1; j <= rows - i; j++) {
+                pattern += '  '; // Add two spaces for formatting
+            }
+    
+            // Add '*' to the pattern 'i' times
+            for (let k = 1; k <= i; k++) {
+                pattern += '* ';
+            }
+    
+            console.log(pattern);
+        }
+    }
+    
+    // Example usage with 6 rows
+    const numberOfRows = 6;
+    printPattern(numberOfRows);
+    </script>
+</body>
+</html>

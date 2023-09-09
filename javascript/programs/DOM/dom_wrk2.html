@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>append</title>
+    <script>
+        // Function to create and append a new div element
+        function appendNewDiv() {
+            // Create a new div element
+            const newDiv = document.createElement('div');
+            
+            // Set the text content for the new div
+            newDiv.textContent = 'This is a new div with text content';
+            
+            // Get the existing container div by its ID
+            const container = document.getElementById('container');
+            
+            // Append the new div to the container
+            container.appendChild(newDiv);
+        }
+    </script>
+</head>
+<body>
+    <div id="container">
+        <!-- Existing content in the container -->
+    </div>
+    <button onclick="appendNewDiv()">Add New Div</button>
+</body>
+</html>

@@ -1,0 +1,120 @@
+.service {
+    background-image: url('images/back4.jpg');
+    background-size: cover;
+    width: 100%;
+    height: 600px;
+    margin-top: 0%;
+}
+.head {
+    text-align: center;
+    color: orangered;
+    font-size: 35px;
+}
+.paragraph {
+    text-align: center;
+    color: white;
+    font-size: 23px;
+}
+.flex-container {
+    display: flex;
+    
+  }
+  
+  .flex-container > div {
+    background-color: orangered;
+    margin: 65px;
+    padding: 50px;
+    font-size: 20px;
+  }
+  .footer {
+  margin-top: 350px;
+    width: 100%;
+    padding: 100px 15%;
+    background: #333;
+    color: white;
+    display: flex;
+}
+
+.col-1 {
+    width: 350px;
+    
+}
+.col-2 {
+    width: 250px;
+}
+.col-2 a {
+    text-decoration: none;
+    color: white;
+    display: block;
+}
+.col-3 {
+    width: 250px;
+}
+.col-3 a {
+    text-decoration: none;
+    color: white;
+    display: block;
+}
+.col-4 {
+    width: 350px;
+}
+.last {
+    text-align: center;
+}
+.h1 {
+    float: left;
+}
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+
+}
+
+nav {
+    margin-top: 20px;
+    text-align: right;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 23px;
+    margin-right: 40px;
+    font-family: 'Times New Roman', Times, serif;
+
+}
+
+nav a:hover {
+    text-decoration: none;
+    color: orangered;
+}
+.head1 {
+    color: orangered;
+    /* margin-top: 90px; */
+   
+}
+.par {
+    text-align: center;
+    margin-top: 20px;
+    
+}
+svg {
+    color: green;
+     width: 50px;    
+}
+h3 {
+    text-align: center;
+}
+.head1 {
+    color: white;
+    font-size: 45px;
+    text-align: center;
+    font-weight: bold;
+}

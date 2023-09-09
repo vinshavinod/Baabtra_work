@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>triangle</title>
+</head>
+<body>
+        <script>
+// JavaScript program for the above approach
+
+// Function to check if the triangle
+// is equilateral or isosceles or scalene
+function checkTriangle(x, y, z)
+{
+    
+    // Check for equilateral triangle
+    if (x == y && y == z)
+        document.write("Equilateral Triangle");
+
+    // Check for isosceles triangle
+    else if (x == y || y == z || z == x)
+        document.write("Isosceles Triangle");
+
+    // Otherwise scalene triangle
+    else
+        document.write("Scalene Triangle");
+}
+
+// Driver Code
+
+    // Given sides of triangle
+    let x = 8, y = 7, z = 9;
+    
+    // Function call
+    checkTriangle(x, y, z);
+
+
+// This code is contributed by Surbhi Tyagi.
+
+</script>
+
+ 
+</body>
+</html>

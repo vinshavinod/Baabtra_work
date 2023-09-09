@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button type="button" onclick="show('vinsha')">Click</button>
+    <button type="button" onclick="greeting()">greet</button>
+    <script>
+        function sum(number1,number2){
+            return number1+number2
+        }
+        result = sum(2,3)
+        console.log('result is', result)
+
+        function add(){
+            alert('My name is vinsha')
+        }
+
+        function show(name){
+            alert(name)
+        }
+
+        function greeting(){
+            var name = prompt('Enter your name')
+            document.write('<h1>welcome ' + name +'</h1>')
+        }
+    </script>
+</body>
+</html>

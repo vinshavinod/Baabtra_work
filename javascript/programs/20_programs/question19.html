@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Multiple-Choice Quiz</title>
+</head>
+<body>
+    <h1>Multiple-Choice Quiz</h1>
+
+    <div id="quiz">
+        <div id="question1">
+            <p>1. What is the capital of France?</p>
+            <label>
+                <input type="radio" name="q1" value="a"> a) Berlin
+            </label><br>
+            <label>
+                <input type="radio" name="q1" value="b"> b) Madrid
+            </label><br>
+            <label>
+                <input type="radio" name="q1" value="c"> c) Paris
+            </label><br>
+        </div>
+
+        <div id="question2">
+            <p>2. What is the largest planet in our solar system?</p>
+            <label>
+                <input type="radio" name="q2" value="a"> a) Earth
+            </label><br>
+            <label>
+                <input type="radio" name="q2" value="b"> b) Jupiter
+            </label><br>
+            <label>
+                <input type="radio" name="q2" value="c"> c) Mars
+            </label><br>
+        </div>
+
+        <button onclick="calculateScore()">Submit Answers</button>
+    </div>
+
+    <div id="results">
+        <h2>Results</h2>
+        <p>Score: <span id="score">0</span> out of 2</p>
+    </div>
+
+    <script>
+        function calculateScore() {
+            const correctAnswers = {
+                q1: "c", // Question 1's correct answer is "c"
+                q2: "b", // Question 2's correct answer is "b"
+            };
+
+            let score = 0;
+
+            for (let i = 1; i <= 2; i++) {
+                const selectedAnswer = document.querySelector(`input[name="q${i}"]:checked`);
+                if (selectedAnswer) {
+                    const questionNumber = `q${i}`;
+                    if (selectedAnswer.value === correctAnswers[questionNumber]) {
+                        score++;
+                    }
+                }
+            }
+
+            const scoreElement = document.getElementById("score");
+            scoreElement.textContent = score;
+
+            // Hide the quiz and show the results
+            document.getElementById("quiz").style.display = "none";
+            document.getElementById("results").style.display = "block";
+        }
+    </script>
+</body>
+</html>

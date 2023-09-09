@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Create a new img element
+const imgElement = document.createElement("img");
+
+// Set the src attribute to the image URL
+imgElement.src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9nvyZ8COfKfQbMIsseChriAdYQz7opZSWj1OQymQkpyVHE8uQb3bjoB0tPoVH2yJiA-s&usqp=CAU"; // Replace with your image URL
+
+// Create a new div element with the class "image-container"
+const imageContainerDiv = document.createElement("div");
+imageContainerDiv.className = "image-container";
+
+// Append the img element to the image container div
+imageContainerDiv.appendChild(imgElement);
+
+// Append the image container div to the body of the document
+document.body.appendChild(imageContainerDiv);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Even Or Not</title>
+    <style>
+       button {
+        color: black;
+        background-color: rgb(18, 233, 7);
+        width: 100px;
+        height: 50px;
+       }
+    </style>
+</head>
+<body>
+  <button type="button" onclick="EvenOrNot()">CLICK</button>
+    <script>
+         function EvenOrNot(){
+            var number = Number(prompt('Enter a Number:'))
+           if(number % 2 == 0){
+            alert('The Given Number '+ number + ' is Even')
+           } 
+           else{
+            alert('The Given Number '+number+ ' is Not Even')
+           }
+         }
+    </script>
+   
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Create a new select element
+const select = document.createElement("select");
+
+// Create an array of color options
+const colorOptions = ["Red", "Green", "Blue"];
+
+// Create and append option elements to the select element
+colorOptions.forEach((color) => {
+    const option = document.createElement("option");
+    option.value = color.toLowerCase(); // Set the option's value to the lowercase color name
+    option.textContent = color;
+    select.appendChild(option);
+});
+
+// Add an event listener to the select element to change the background color
+select.addEventListener("change", function () {
+    const selectedColor = select.value;
+    document.body.style.backgroundColor = selectedColor;
+});
+
+// Append the select element to the body of the document
+document.body.appendChild(select);
+
+    </script>
+</body>
+</html>

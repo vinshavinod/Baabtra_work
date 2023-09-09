@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>anagram or not</title>
+</head>
+<body>
+    <script>
+        // Function to check if two strings are anagrams
+function areAnagrams(str1, str2) {
+  // Remove spaces and convert both strings to lowercase
+  const cleanStr1 = str1.replace(/ /g, '').toLowerCase();
+  const cleanStr2 = str2.replace(/ /g, '').toLowerCase();
+
+  // Check if the lengths of the cleaned strings are different
+  if (cleanStr1.length !== cleanStr2.length) {
+    return false;
+  }
+
+  // Create character frequency maps for both strings
+  const charCount1 = {};
+  const charCount2 = {};
+
+  // Populate the frequency map for the first string
+  for (const char of cleanStr1) {
+    charCount1[char] = (charCount1[char] || 0) + 1;
+  }
+
+  // Populate the frequency map for the second string
+  for (const char of cleanStr2) {
+    charCount2[char] = (charCount2[char] || 0) + 1;
+  }
+
+  // Compare the character frequency maps
+  for (const char in charCount1) {
+    if (charCount1[char] !== charCount2[char]) {
+      return false;
+    }
+  }
+
+  return true;
+}
+
+// Example usage
+const str1 = "listen";
+const str2 = "silent";
+
+if (areAnagrams(str1, str2)) {
+  console.log(`"${str1}" and "${str2}" are anagrams.`);
+} else {
+  console.log(`"${str1}" and "${str2}" are not anagrams.`);
+}
+
+    </script>
+</body>
+</html>

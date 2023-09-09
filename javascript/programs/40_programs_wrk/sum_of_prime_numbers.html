@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sum of prime number</title>
+</head>
+<body>
+    <script>
+       // Function to check if a number is prime
+function isPrime(number) {
+  if (number <= 1) {
+    return false;
+  }
+
+  if (number <= 3) {
+    return true;
+  }
+
+  if (number % 2 === 0 || number % 3 === 0) {
+    return false;
+  }
+
+  for (let i = 5; i * i <= number; i += 6) {
+    if (number % i === 0 || number % (i + 2) === 0) {
+      return false;
+    }
+  }
+
+  return true;
+}
+
+// Function to calculate the sum of prime numbers up to a given limit
+function sumOfPrimes(limit) {
+  let sum = 0;
+
+  for (let i = 2; i <= limit; i++) {
+    if (isPrime(i)) {
+      sum += i;
+    }
+  }
+
+  return sum;
+}
+
+// Example usage
+const limit = 100; // Replace with the limit you want
+const primeSum = sumOfPrimes(limit);
+console.log(`The sum of prime numbers up to ${limit} is: ${primeSum}`);
+
+
+    </script>
+</body>
+</html>

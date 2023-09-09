@@ -1,0 +1,179 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+.h1 {
+    float: left;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav {
+    margin-top: 20px;
+    text-align: right;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 23px;
+    margin-right: 40px;
+    font-family: 'Times New Roman', Times, serif;
+
+}
+
+nav a:hover {
+    text-decoration: none;
+    color: orangered;
+}
+.coffee {
+    color: white;
+    font-weight: bold;
+    font-size: 55px;
+    margin-top: 70px;
+    margin-left: 70px;
+}
+.spa1 {
+    color: rgb(213, 62, 8);
+    font-weight: bold;
+    font-size: 50px;
+    margin-top: 100px;
+    margin-left: 70px;
+} 
+/* .ml-100 top-left {
+    padding-left: 100px;
+    padding-top: 100px;
+} */
+.paraa {
+    color: white;
+    /* margin-top: 50px; */
+    margin-left: 70px;
+}
+.content {
+    background-image: url('images/cof1.jpg');
+    width: 100%;
+    height: 800px;
+    background-size: cover;
+    margin: 0px;
+    padding-top: 30px;
+    padding-left: 40px;
+    font-size: 30px;
+}
+.paraa {
+    font-size: 25px;
+    color: white;
+}
+.btn {
+    color: white;
+    background-color: black;
+    width: 150px;
+    height: 40px;
+    font-size: 25px;
+    margin-left: 70px;
+} 
+.head1 {
+    color: chocolate;
+    font-weight: bold;
+}
+.another-main {
+    width: 50%;
+    margin-top: 170px;
+   float: left;
+  
+   
+}
+.para2 {
+    color: rgb(31, 22, 22);
+    font-size: 20px;
+}
+.img {
+    float: right;
+    width: 50%;
+    margin-top: 90px;
+    margin-bottom: 90px;
+    
+    
+   
+}
+.footer {
+    margin-top: 150px;
+    width: 100%;
+    padding: 100px 15%;
+    background: #333;
+    color: white;
+    display: flex;
+}
+
+.col-1 {
+    width: 350px;
+    
+}
+.col-2 {
+    width: 250px;
+}
+.col-2 a {
+    text-decoration: none;
+    color: white;
+    display: block;
+}
+.col-3 {
+    width: 250px;
+}
+.col-3 a {
+    text-decoration: none;
+    color: white;
+    display: block;
+}
+.col-4 {
+    width: 350px;
+}
+.last {
+    text-align: center;
+}
+.container {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.bottom-left {
+    position: absolute;
+    bottom: 8px;
+    left: 16px;
+}
+
+.top-left {
+    position: absolute;
+    top: 8px;
+    left: 16px;
+}
+
+.top-right {
+    position: absolute;
+    top: 8px;
+    right: 16px;
+}
+
+.bottom-right {
+    position: absolute;
+    bottom: 8px;
+    right: 16px;
+}
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

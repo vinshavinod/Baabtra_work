@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="head">head</h1>
+    <input type="password" id="password">
+    <button onclick="toggle()"></button>
+    <script>
+        function toggle(){
+            var head = document.getElementById("head")
+            var input= document.getElementById("password")
+            type=input.type
+            if (type == "password")
+            {
+                input.type="text"
+            }
+            else{
+                input.type="password"
+            }
+        }
+    </script>
+
+</body>
+</html>

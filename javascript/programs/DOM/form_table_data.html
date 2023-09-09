@@ -1,0 +1,155 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+
+
+  <style>
+    
+  </style>
+</head>
+
+<body>
+    <form action="">
+        Name:
+        <input type="text" name="" id="nInput"><br><br>
+        Age:
+        <input type="text" name="" id="aInput"><br><br>
+        Subject:
+        <input type="text" name="" id="sInput"><br><br>
+        Place:
+        <input type="text" name="" id="pInput"><br><br>
+        <input type="button" name="Add" value="Add" id="validate">
+    </form>
+    <table class="table" style="border:3px solid black;">
+        <thead>
+            <tr>
+                <th scope="col">Sl no</th>
+                <th scope="col">Name</th>
+                <th scope="col">Age</th>
+                <th scope="col">Subject</th>
+                <th scope="col">Place</th>
+                <th scope="col">status</th>
+                <th scope="col">Action</th>
+            </tr>
+        </thead>
+        <tbody id="tbody">
+
+        </tbody>
+
+    </table>
+
+   <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    Launch demo modal
+  </button>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+        Name:
+        <input type="text" name="" id="name"><br><br>
+        Age:
+        <input type="text" name="" id="age"><br><br>
+        Subject:
+        <input type="text" name="" id="subject"><br><br>
+        Place:
+        <input type="text" name="" id="place"><br><br>
+        
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" onclick="update()">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+    <script>
+        var inputName = document.getElementById('nInput')
+        var inputAge = document.getElementById('aInput')
+        var inputSubject = document.getElementById('sInput')
+        var inputPlace = document.getElementById('pInput')
+        var vButton = document.getElementById('validate')
+        var tableBody = document.getElementById('tbody')
+
+        var modalName = document.getElementById('name')
+        var modalAge = document.getElementById('age')
+        var modalSubject = document.getElementById('subject')
+        var modalPlace = document.getElementById('place')
+        
+        i = 0
+
+        function Add() {
+            var row = tableBody.insertRow()
+            var cell1 = row.insertCell(0)
+            var cell2 = row.insertCell(1)
+            var cell3 = row.insertCell(2)
+            var cell4 = row.insertCell(3)
+            var cell5 = row.insertCell(4)
+            var cell6 = row.insertCell(5)
+            var cell7 = row.insertCell(6)
+            var cell8 = row.insertCell(7)
+            cell1.innerHTML = i + 1
+            cell2.innerHTML = inputName.value
+            cell3.innerHTML = inputAge.value
+            cell4.innerHTML = inputSubject.value
+            cell5.innerHTML = inputPlace.value
+            var statusButton = document.createElement('button')
+            statusButton.innerHTML = 'complete'
+            statusButton.onclick = function status() {
+                cell6.innerHTML = 'completed'
+            }
+            cell6.appendChild(statusButton)
+            var editButton = document.createElement('button')
+            editButton.innerHTML = 'Edit'
+            editButton.setAttribute('data-bs-toggle', 'modal')
+            editButton.setAttribute('data-bs-target','#exampleModal')
+            editButton.addEventListener('click',function edit(event){
+              cells = event.target.parentElement.parentElement.childNodes
+              modalName.value = cells[1].innerHTML
+              modalAge.value = cells[2].innerHTML
+              modalSubject.value = cells[3].innerHTML
+              modalPlace.value = cells[4].innerHTML
+            })
+
+            cell7.appendChild(editButton)
+            var deleteButton = document.createElement('button')
+            deleteButton.innerHTML = 'delete'
+            deleteButton.addEventListener('click', function del(event) {
+                event.target.parentElement.parentElement.remove()
+            })
+            cell8.appendChild(deleteButton)
+            i++
+
+          
+        }
+        vButton.addEventListener('click', Add)
+         
+        function update(){
+          cells[1].innerHTML = modalName.value
+          cells[2].innerHTML = modalAge.value
+          cells[3].innerHTML = modalSubject.value
+          cells[4].innerHTML = modalPlace.value
+        }
+
+
+
+    </script>
+</body>
+
+</html>

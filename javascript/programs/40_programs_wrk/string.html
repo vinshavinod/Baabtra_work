@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Function to extract a substring from a string
+function extractSubstring(inputString, start, end) {
+    if (start < 0 || end <= start || end > inputString.length) {
+        return "Invalid input or indices"; // Handle invalid input
+    }
+
+    let result = '';
+    
+    // Iterate through the string and build the substring
+    for (let i = start; i < end; i++) {
+        result += inputString[i];
+    }
+
+    return result;
+}
+
+// Example usage:
+const inputString = "helloworld";
+const startIndex = 3;
+const endIndex = 7;
+
+const substring = extractSubstring(inputString, startIndex, endIndex);
+
+console.log(substring); // Output: "lowo"
+
+    </script>
+</body>
+</html>

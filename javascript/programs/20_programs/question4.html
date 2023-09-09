@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Create a new table element
+const table = document.createElement("table");
+
+// Create the first row
+const row1 = table.insertRow(0);
+
+// Create three cells for the first row
+for (let i = 0; i < 3; i++) {
+    const cell = row1.insertCell(i);
+    // You can set the text for the first row cells here if needed.
+    // For example, cell.textContent = "Row 1, Cell " + (i + 1);
+}
+
+// Create the second row
+const row2 = table.insertRow(1);
+
+// Create three cells for the second row
+for (let i = 0; i < 3; i++) {
+    const cell = row2.insertCell(i);
+    // Set the text of the second row, second column cell to "Table Data"
+    if (i === 1 && row2.rowIndex === 1) {
+        cell.textContent = "Table Data";
+    }
+}
+
+// Append the table to the body of the document
+document.body.appendChild(table);
+
+    </script>
+</body>
+</html>

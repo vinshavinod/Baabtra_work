@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        array1 = [10,20,30,40,50]
+        array2 = [10,20,30,40,50]
+        var value = 0
+        if(array1.length != array2.length){
+            document.write('not equal')
+
+        }
+        else{
+            for(i = 0; i < array1.length; i++){
+                if(array1[i] != array2[i]){
+                document.write('not equal')
+                break
+                }
+                else{
+                    value = 1
+                }
+            }
+        }   
+        if(value == 1){
+            document.write('array is equal')
+        }
+    </script>
+</body>
+</html>

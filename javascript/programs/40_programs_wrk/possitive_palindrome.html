@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+    function isPalindrome(num) {
+  // Convert the number to a string
+  const numStr = num.toString();
+
+  // Reverse the string
+  const reversedStr = numStr.split('').reverse().join('');
+
+  // Compare the original string with the reversed string
+  return numStr === reversedStr;
+}
+
+const inputNumber = 151; // Replace this with your input number
+const isPalindromic = isPalindrome(inputNumber);
+
+console.log(`Is ${inputNumber} a palindrome number? ${isPalindromic}`);
+
+   </script> 
+</body>
+</html>

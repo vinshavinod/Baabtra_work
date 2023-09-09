@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Create a new div element with the class "container"
+const containerDiv = document.createElement("div");
+containerDiv.className = "container";
+
+// Create the first paragraph element with the text "Paragraph 1"
+const paragraph1 = document.createElement("p");
+paragraph1.textContent = "Paragraph 1";
+
+// Create the second paragraph element with the text "Paragraph 2"
+const paragraph2 = document.createElement("p");
+paragraph2.textContent = "Paragraph 2";
+
+// Append the paragraph elements to the container div
+containerDiv.appendChild(paragraph1);
+containerDiv.appendChild(paragraph2);
+
+// Append the container div to the body of the document
+document.body.appendChild(containerDiv);
+
+    </script>
+</body>
+</html>

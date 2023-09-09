@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .visible {
+            background-color: brown;
+            color: white;
+            padding: 10px;
+            visibility: visible;
+        }
+        .hidden {
+            background-color: blue;
+            color: aqua;
+            padding: 10px;
+            /* visibility: hidden; */
+            display: none;
+        }
+        .opaque {
+            background-color: red;
+            color: white;
+            padding: 10px;
+            margin: 20px;
+            opacity: 1;
+        }
+        .transparent {
+            background-color: blue;
+            color: black;
+            padding: 10px;
+            margin: 20px;
+            opacity: .3;
+        }
+        .gradient {
+            height: 200px;
+            width: 200px;
+            background-image: linear-gradient(45deg, green,blue,pink,yellow);
+            /* background-image: radial-gradient(circle,green,yellow,blue); */
+            box-shadow: 10px 10px 1px green;
+
+        }
+        .overflow {
+            width: 300px;
+            height: 200px;
+            border: 1px solid blue;
+            padding: 10px;
+            overflow: scroll;
+        }
+    </style>
+</head>
+<body>
+    <div class="visible">This is visible element</div>
+    <div class="hidden">This is hidden element</div>
+    <div class="visible">This is visible element</div>
+    
+    <div class="opaque">This is opaque element
+        <p>This is paragraph of opaque element</p>
+    </div>
+    <div class="transparent">This is transparent element
+        <p>This is paragraph of transparent element</p>
+    </div>
+    <div class="gradient"></div>
+    <div class="overflow">
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. </p>
+    </div>
+</body>
+</html>

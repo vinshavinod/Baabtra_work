@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .error-message {
+      color: red;
+      margin-top: 5px;
+    }
+  </style>
+</head>
+<body>
+  <form id="myForm">
+    <label for="name">Name:</label>
+    <input type="text" id="name" required>
+    <br>
+    <label for="email">Email:</label>
+    <input type="email" id="email" required>
+    <br>
+    <label for="message">Message:</label>
+    <textarea id="message" required></textarea>
+    <br>
+    <button type="submit">Submit</button>
+  </form>
+  <div id="errorMessages"></div>
+  <script>
+    const form = document.getElementById('myForm');
+    const errorMessagesDiv = document.getElementById('errorMessages');
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
+      errorMessagesDiv.innerHTML = '';
+      const requiredFields = form.querySelectorAll('[required]');
+      requiredFields.forEach((field) => {
+        if (field.value.trim() === '') {
+          const fieldName = field.getAttribute('name');
+          const errorMessage = document.createElement('p');
+          errorMessage.textContent = `${fieldName} is required.`;
+          errorMessagesDiv.appendChild(errorMessage);
+        }
+      });
+    });
+  </script>
+</body>
+</html>

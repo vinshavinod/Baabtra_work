@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var global = 'global variable'
+        var y = 20
+        function scope(){
+            x = 10
+            var y = 10
+            var local = 'local variable'
+            console.log(local)
+            console.log(global,"global inside")
+            console.log('value of x inside', x)
+            console.log('value of y inside', y)
+
+        }
+        scope()
+        
+        // console.log(local)  
+        // error it is local variable not work outside the function
+
+        console.log(global, 'global outside')
+
+        console.log('value of x outside', x)
+
+        console.log('value of y outside', y)
+    </script>
+</body>
+</html>

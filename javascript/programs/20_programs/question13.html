@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Odd-Numbered List Items</title>
+    <style>
+        /* Define a CSS class for highlighting */
+        .highlighted {
+            background-color: lightblue;
+        }
+    </style>
+</head>
+<body>
+    <h1>Ordered List with Odd-Numbered Items Highlighted</h1>
+    <ol id="myList">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+        <li>Item 5</li>
+        <li>Item 6</li>
+        <li>Item 7</li>
+        <li>Item 8</li>
+        <li>Item 9</li>
+        <li>Item 10</li>
+    </ol>
+
+    <script>
+        // Get the ordered list
+        const ol = document.getElementById("myList");
+
+        // Get all list items within the ordered list
+        const listItems = ol.getElementsByTagName("li");
+
+        // Loop through the list items and add a class to odd-numbered items
+        for (let i = 0; i < listItems.length; i++) {
+            if (i % 2 === 0) {
+                // If the index is even (0-based), add the "highlighted" class
+                listItems[i].classList.add("highlighted");
+            }
+        }
+    </script>
+</body>
+</html>

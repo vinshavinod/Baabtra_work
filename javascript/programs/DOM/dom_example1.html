@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom</title>
+    <style>
+        .a{ 
+           height: 200px;
+           width: 200px;
+           background-color: blue;
+        }
+    </style>
+</head>
+<body id="body" style="background-color: white;">
+    <button onclick="colour()" id="button">chenge colour</button>
+    <div id="div"><p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum, exercitationem!</p></div>
+    <button onclick="click()" id="button">button</button>
+    <script>
+        function colour(){
+            var page = document.getElementById("body")
+            var button = document.getElementById("button")
+            color = page.style.backgroundColor
+            if(color == "white"){
+                page.style.backgroundColor = "black"
+            }
+            else{
+               page.style.backgroundColor = "white"
+            }
+            
+        }
+        function add(){
+            var main = document.getElementById('div')
+            main.classList.add('a')
+            setTimeout(function(){
+                main.classList.remove('a')
+            },3000)
+        }
+    </script>
+    
+</body>
+</html>

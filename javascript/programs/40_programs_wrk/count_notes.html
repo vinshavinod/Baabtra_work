@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>count notes</title>
+</head>
+<body>
+   <script>
+    // Function to count total number of notes for a given amount
+function countNotes(amount) {
+  const notes = [500, 100, 50, 20, 10, 5, 2, 1];
+  const noteCount = {};
+
+  // Initialize noteCount object with all notes set to 0
+  for (const note of notes) {
+    noteCount[note] = 0;
+  }
+
+  // Count the number of each type of note
+  for (const note of notes) {
+    if (amount >= note) {
+      const count = Math.floor(amount / note);
+      noteCount[note] = count;
+      amount -= count * note;
+    }
+  }
+
+  return noteCount;
+}
+
+// Example usage
+const amount = 575; // Replace with the amount you want to count notes for
+const noteCounts = countNotes(amount);
+
+console.log("Input amount:", amount);
+console.log("Total number of notes:");
+for (const note in noteCounts) {
+  console.log(`${note}: ${noteCounts[note]}`);
+}
+
+   </script> 
+</body>
+</html>

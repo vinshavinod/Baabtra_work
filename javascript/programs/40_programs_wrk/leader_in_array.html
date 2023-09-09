@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    function findLeaders(arr) {
+    const n = arr.length;
+    let maxRight = arr[n - 1];
+    const leaders = [maxRight]; // The rightmost element is always a leader
+
+    // Iterate from the second-to-last element to the first element
+    for (let i = n - 2; i >= 0; i--) {
+        if (arr[i] > maxRight) {
+            maxRight = arr[i];
+            leaders.push(maxRight);
+        }
+    }
+
+    return leaders.reverse(); // Reverse the leaders list to get the correct order
+}
+
+// Example usage:
+const input1 = [16, 17, 4, 3, 5, 2];
+const leaders1 = findLeaders(input1);
+console.log(leaders1.join(' ')); // Output: "17 5 2"
+
+const input2 = [1, 2, 3, 4, 0];
+const leaders2 = findLeaders(input2);
+console.log(leaders2.join(' ')); // Output: "4 0"
+
+    </script>
+</body>
+</html>

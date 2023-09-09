@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Create a text input field
+const inputField = document.createElement("input");
+inputField.type = "text";
+
+// Create a button element
+const submitButton = document.createElement("button");
+submitButton.textContent = "Submit";
+
+// Add an event listener to the button to display an alert
+submitButton.addEventListener("click", function () {
+    const inputValue = inputField.value;
+    alert("You entered: " + inputValue);
+});
+
+// Append the input field and button to the body of the document
+document.body.appendChild(inputField);
+document.body.appendChild(submitButton);
+
+    </script>
+</body>
+</html>

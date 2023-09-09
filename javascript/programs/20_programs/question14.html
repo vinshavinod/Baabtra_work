@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Countdown Timer</title>
+</head>
+<body>
+    <h1>Countdown Timer</h1>
+    <p>Time remaining: <span id="timer">05:00</span></p>
+
+    <script>
+        // Set the initial countdown time in seconds (e.g., 5 minutes)
+        let countdownTime = 5 * 60; // 5 minutes * 60 seconds
+
+        // Function to update the timer display
+        function updateTimerDisplay() {
+            const minutes = Math.floor(countdownTime / 60);
+            const seconds = countdownTime % 60;
+            const timerDisplay = document.getElementById("timer");
+            timerDisplay.textContent = `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+        }
+
+        // Function to start the countdown timer
+        function startCountdown() {
+            const timerInterval = setInterval(function() {
+                if (countdownTime > 0) {
+                    countdownTime--;
+                    updateTimerDisplay();
+                } else {
+                    clearInterval(timerInterval);
+                    alert("Time's up!");
+                }
+            }, 1000); // Update every 1 second (1000 milliseconds)
+        }
+
+        // Start the countdown timer when the page loads
+        window.onload = startCountdown;
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First Number And Second Number</title>
+</head>
+
+<body>
+    <button type="button" onclick="FirstAndSecond()">Click</button>
+    <script>
+        function FirstAndSecond() {
+            var firstnumber = Number(prompt('Enter The First Number'))
+            var secondnumber = Number(prompt('Enter The Second Number'))
+            if (firstnumber % secondnumber == 0) {
+                alert('First number is divisible by second number')
+            }
+            else {
+                alert('First number is not divisible by second number')
+            }
+        }
+    </script>
+</body>
+
+</html>

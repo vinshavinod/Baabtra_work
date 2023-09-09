@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Divisible By 7 Or Not</title>
+    <style>
+        button{
+            text-align: center;
+            color: aliceblue;
+            background-color: crimson;
+            width: 100px;
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <button type="button" onclick="DivisibleBy7()">Check</button>
+    <script>
+      function DivisibleBy7(){
+        var number = Number(prompt('Enter A Number'))
+        if(number % 7 == 0){
+            alert('The Number '+number+' is Divisible By 7.')
+        }
+        else{
+           alert ('The Number '+number+' is Not Divisible By 7')
+        }
+      }
+    </script>
+</body>
+</html>

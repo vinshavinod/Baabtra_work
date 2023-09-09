@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>factor</title>
+</head>
+<body>
+    <script>
+        // Function to find factors of a given number
+function findFactors(number) {
+  const factors = [];
+
+  // Loop through numbers from 1 to the given number
+  for (let i = 1; i <= number; i++) {
+    // Check if 'i' is a factor (divisor) of the given number
+    if (number % i === 0) {
+      factors.push(i);
+    }
+  }
+
+  return factors;
+}
+
+// Example usage
+const num = 12; // Replace with the number for which you want to find factors
+const factors = findFactors(num);
+
+console.log(`Factors of ${num} are: ${factors}`);
+
+    </script>
+</body>
+</html> 

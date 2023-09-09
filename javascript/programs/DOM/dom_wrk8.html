@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <ul id="itemList">
+        <!-- Initial list item -->
+        <li>
+            Item 1
+            <button onclick="removeItem(this)">Remove</button>
+        </li>
+    </ul>
+
+    <button onclick="addItem()">Add Item</button>
+
+    <script>
+        // JavaScript to handle adding and removing items
+        let itemId = 2; // Starting ID for new items
+
+        // Function to add a new item to the list
+        function addItem() {
+            const itemList = document.getElementById('itemList');
+            const newItem = document.createElement('li');
+            newItem.textContent = `Item ${itemId}`;
+            
+            const removeButton = document.createElement('button');
+            removeButton.textContent = 'Remove';
+            removeButton.onclick = function() {
+                removeItem(this);
+            };
+            
+            newItem.appendChild(removeButton);
+            itemList.appendChild(newItem);
+            
+            itemId++;
+        }
+
+        // Function to remove the corresponding item from the list
+        function removeItem(button) {
+            const itemToRemove = button.parentNode; // Get the parent <li>
+            const itemList = document.getElementById('itemList');
+            itemList.removeChild(itemToRemove);
+        }
+    </script>
+</body>
+</html>

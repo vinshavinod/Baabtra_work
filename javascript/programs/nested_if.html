@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=`, initial-scale=DDE">
+    <title>Highest number</title>
+</head>
+<body>
+    <button type="button" onclick="Highest()">Click</button>
+    <script>
+        function Highest(){
+        var number1 = Number(prompt('Enter the first number'))
+        var number2 = Number(prompt('Enter the second number'))
+        var number3 = Number(prompt('Enther the third number'))
+        if(number1 > number2){
+           if(number1 > number3){
+            alert('first number is highest')
+           }
+           else{
+            alert('Third number is highest')
+           }
+        }
+        else{
+            if(number2 > number3){
+                alert('Second is highest')
+            }
+            else{
+                alert('Third is highest')
+            }
+        }
+        }
+    
+    </script>
+</body>
+</html>

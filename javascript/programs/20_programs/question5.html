@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Create a new ul (unordered list) element
+const ulElement = document.createElement("ul");
+
+// Create an array of text content for the li elements
+const listItems = ["Item 1", "Item 2", "Item 3", "Item 4", "Item 5"];
+
+// Loop through the array and create li elements with the text content
+for (const itemText of listItems) {
+    const liElement = document.createElement("li");
+    liElement.textContent = itemText;
+    
+    // Append the li element to the ul element
+    ulElement.appendChild(liElement);
+}
+
+// Append the ul element to the body of the document
+document.body.appendChild(ulElement);
+
+    </script>
+</body>
+</html>

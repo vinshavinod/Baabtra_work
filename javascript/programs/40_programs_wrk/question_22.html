@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function checkNumber(n) {
+  switch (true) {
+    case n % 2 !== 0:
+      console.log("Weird");
+      break;
+    case n % 2 === 0 && n >= 2 && n <= 5:
+      console.log("Not Weird");
+      break;
+    case n % 2 === 0 && n >= 6 && n <= 20:
+      console.log("Weird");
+      break;
+    case n % 2 === 0 && n > 20:
+      console.log("Not Weird");
+      break;
+  }
+}
+
+// Test the function with different values of n
+checkNumber(3);   // Output: Weird
+checkNumber(4);   // Output: Not Weird
+checkNumber(8);   // Output: Weird
+checkNumber(22);  // Output: Not Weird
+
+    </script>
+</body>
+</html>

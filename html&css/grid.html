@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: grid;
+            grid-template-rows: auto 1fr auto;
+            grid-template-columns: 1fr;
+            min-height: 100vh;
+        }
+
+        .header {
+            background-color: aqua;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .title {
+            margin: 0;
+        }
+
+        .nav {
+            background-color: bisque;
+            padding: 10px;
+            height: 100px;
+            
+        }
+
+        .navlist {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .navlist li {
+            display: inline;
+            margin-right: 10px;
+           
+        }
+
+        .navlist li:last-child {
+            margin-right: 0;
+        }
+
+        .navlist li:a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .main {
+            padding: 20px;
+        }
+
+        .footer {
+            background-color: rgb(205, 187, 137);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <h1 class="title">CSS GRID</h1>
+    </header>
+    <nav class="nav">
+        <ul class="navlist">
+            <li><a href="">Home</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Contact</a></li>
+        </ul>
+    </nav>
+    <main class="main">
+        <h2>Welcome to css grid</h2>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque, eaque suscipit aliquam ipsum distinctio
+            unde perspiciatis animi! Adipisci repellat, repellendus impedit alias ex numquam. Neque consequatur
+            recusandae quisquam eos eligendi fugit ipsa debitis voluptatum quas magnam maxime, numquam error iste
+            aperiam ad quo molestiae reiciendis, officia voluptatem! Nulla, se Lorem ipsum dolor, sit amet consectetur
+            adipisicing elit. Nulla voluptas, hic delectus molestiae ea facere, est officia modi id, maiores corporis
+            provident exercitationem veniam asperiores labore deleniti quos recusandae. Voluptates fuga laboriosam
+            facilis beatae minima doloremque accusamus dicta modi numquam illo libero eligendi deleniti dignissimos vel
+            doloribus similique totam, eveniet cupiditate ut quos repellendus! Rem dicta repudiandae unde fugit vel
+            minus in, possimus vero corporis consequatur, commodi enim repellat itaque dolore tempora sunt aut. Eos, a
+            alias error doloribus veritatis porro fugit eveniet. Atque vel sit quod doloribus qui inventore nulla,
+            facilis commodi, dicta sunt sint veniam harum tempora numquam.
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident voluptatum eaque quibusdam consectetur
+            amet sint laborum neque saepe aspernatur sed deserunt asperiores obcaecati similique, beatae nam eligendi
+            praesentium error aliquam dolore nemo? Eos nisi, aperiam quo ex labore tempora dolor ipsam sed repudiandae
+            facilis. Hic, voluptate animi? At sint commodi modi dolore delectus facere, nulla quam optio cumque
+            asperiores repudiandae voluptatibus dolores sed eos impedit beatae iusto nam sequi distinctio. Eaque
+            deleniti voluptas odit hic quo adipisci ipsa ipsum quasi consequatur exercitationem iure incidunt sapiente
+            saepe in nam magnam doloribus nulla corporis, maiores corrupti inventore quibusdam commodi cum molestias.
+            Nostrum eveniet pariatur asperiores, itaque quo adipisci, hic eos accusamus modi delectus molestiae nulla
+            autem! Voluptatum quas provident repudiandae non recusandae harum impedit. Suscipit accusamus est enim
+            aperiam alias praesentium et quas, cum consectetur deleniti esse nesciunt iure velit quasi dicta provident,
+            earum a pariatur neque explicabo distinctio, deserunt cupiditate ut cumque. Amet ea sed beatae nemo saepe
+            eveniet odit ad autem est, officia obcaecati animi? Vel laudantium sit illum tempora sunt inventore nesciunt
+            similique provident a, voluptas excepturi quas sapiente porro in nisi? Amet, vero ducimus impedit unde magni
+            aut deserunt cum voluptatem recusandae accusantium voluptas, eaque nam doloribus sequi.
+        </p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat deserunt placeat optio nobis deleniti,
+            perspiciatis nisi sed ipsum delectus dignissimos beatae sunt, officiis saepe, sequi iste dolorum officia
+            nesciunt neque accusantium porro dolore accusamus aperiam impedit! Expedita ullam sunt magni veniam
+            accusamus iste eius in neque, esse, excepturi at fugiat maiores reiciendis enim doloremque ratione dicta
+            optio dignissimos culpa. Enim minus iusto dolor blanditiis, vitae commodi libero at, accusantium sit tenetur
+            quos officiis totam neque cupiditate numquam pariatur sunt aut quibusdam repudiandae voluptates, excepturi
+            autem similique iste? Magni possimus ratione cupiditate obcaecati necessitatibus facere dicta? Tempora
+            magnam repellendus labore obcaecati, at provident veritatis. Quod corporis exercitationem sapiente fuga amet
+            inventore quibusdam distinctio doloremque nam et sit voluptas, numquam fugit molestias sunt nobis obcaecati
+            deserunt. Explicabo maxime, distinctio, est pariatur in porro delectus labore architecto eaque quia nobis.
+            Vitae eveniet aliquid eligendi aut officia, eius alias sit explicabo, incidunt necessitatibus dicta.
+            Doloremque, nisi? Optio error natus temporibus quis reprehenderit eius ullam laboriosam. Molestiae culpa
+            officia unde natus, sequi praesentium provident iusto quaerat? Quos sequi fugiat excepturi voluptatibus
+            officiis. Dicta, cupiditate magnam? Aliquid tempore molestiae tenetur expedita vitae pariatur ducimus. Sint
+            ad totam eum natus et quod consequuntur aperiam quos omnis? Facilis veniam vel doloribus, velit fugiat
+            necessitatibus, repellat reiciendis ipsam illum expedita natus ad maxime delectus optio nesciunt voluptas
+            animi deserunt iste. A ipsam, aperiam debitis eveniet velit quisquam rerum in, necessitatibus alias minima
+            magnam odio, praesentium perspiciatis? Minus amet, cum nam excepturi sed dicta eum doloribus accusantium eos
+            quibusdam quam? Temporibus autem accusamus mollitia eaque amet optio, hic unde id nihil, laborum harum alias
+            vero natus ratione quisquam pariatur, placeat at maxime ullam. Sit totam placeat vel, suscipit consequuntur
+            minima aut alias. Aperiam recusandae dolores cum est rerum ipsa, eum nesciunt quo repellat autem iusto
+            labore totam facilis at ipsam!</p>
+
+    </main>
+    <footer class="footer">
+        -- 2023 css grid --<br />
+        cssgrid@gmail.com <br />
+        0495 3567898
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Style for the countdown timer */
+        #countdown {
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <button id="startButton">Start Countdown</button>
+    <p id="countdown">Countdown: <span id="timer">10</span> seconds</p>
+    <p id="message"></p>
+
+    <script>
+        let timerValue = 10; // Initial countdown time in seconds
+        let countdownInterval; // Variable to store the interval ID
+
+        // Function to start the countdown timer
+        function startCountdown() {
+            const timerElement = document.getElementById('timer');
+            const messageElement = document.getElementById('message');
+            const startButton = document.getElementById('startButton');
+
+            startButton.disabled = true; // Disable the button while the countdown is running
+
+            // Update the timer value every second
+            countdownInterval = setInterval(function () {
+                timerValue--;
+
+                // Update the timer display
+                timerElement.textContent = timerValue;
+
+                if (timerValue === 0) {
+                    // Display a message when the timer reaches zero
+                    messageElement.textContent = 'Countdown complete!';
+                    clearInterval(countdownInterval); // Stop the countdown
+                    startButton.disabled = false; // Enable the button for a new countdown
+                }
+            }, 1000); // Update every 1 second (1000 milliseconds)
+        }
+
+        // Add a click event listener to the start button
+        const startButton = document.getElementById('startButton');
+        startButton.addEventListener('click', startCountdown);
+    </script>
+</body>
+</html>
