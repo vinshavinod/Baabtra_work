@@ -1,0 +1,31 @@
+/* Add your CSS styles here to make the quiz visually appealing */
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.quiz-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.question-container {
+    margin: 20px 0;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}
+
